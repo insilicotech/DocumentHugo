@@ -1,0 +1,23 @@
+author = "Zeng Shu(Insilico Technologies, Inc.)"
+
+# baseURL = "http://wiki.insilicotech.io/elixir"
+languageCode = "ja-jp"
+title = "Exlixir Development"
+
+theme = "hugo-theme-learn"
+
+showVisitedLinks = false
+
+# Disable search function. It will hide search bar
+disableSearch = true
+
+home = [ "HTML", "RSS", "JSON" ]
+
+[params]
+  # Change default color scheme with a variant one. Can be "red", "blue", "green".
+  themeVariant = "blue"
+
+ googlefonts = ["Droid Sans", "Fira Mono"]
+ fontbody = 'Droid Sans'
+ fontcode = 'Fira Mono'
+ fontsizecode = 16

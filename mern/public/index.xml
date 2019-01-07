@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Node.js によるWebService開発 on Node.js WebService</title>
+    <link>http://example.org/</link>
+    <description>Recent content in Node.js によるWebService開発 on Node.js WebService</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Sat, 10 Nov 2018 10:59:18 +0900</lastBuildDate>
+    
+	<atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>スタートアップ</title>
+      <link>http://example.org/01.startup/01_setup/</link>
+      <pubDate>Sat, 10 Nov 2018 11:08:02 +0900</pubDate>
+      
+      <guid>http://example.org/01.startup/01_setup/</guid>
+      <description>開発環境の構築 Node.jsのインストール Brewによるインストール brew update brew install node brew upgrade node node -v npm -v  Tarファイルからインストール echo &#39;export PATH=$HOME/local/bin:$PATH&#39; &amp;gt;&amp;gt; ~/.bashrc . ~/.bashrc mkdir ~/local ~/node-latest-install cd ~/node-latest-install curl http://nodejs.org/dist/node-latest.tar.gz | tar xz --strip-components=1 $./configure --prefix=~/local $ make install $ curl https://npmjs.org/install.sh | sh  npmパッケージの実行ツール npm i -g npx  Node.js プロジェクトの設定 Node.jsプロジェクトの作成 mkdir webapi &amp;amp;&amp;amp; cd webapi mkdir src dist touch .gitignore .editorconfig .prettierrc touch src/server.js npm init -y git init  Transpilerの準備: Babel ES2015(ES6)をコンバイルするのに必要なパッケージbabelをインストールする。babelは7.</description>
+    </item>
+    
+    <item>
+      <title>Expressの基本処理</title>
+      <link>http://example.org/01.startup/02_basic/</link>
+      <pubDate>Sun, 11 Nov 2018 10:52:57 +0900</pubDate>
+      
+      <guid>http://example.org/01.startup/02_basic/</guid>
+      <description> Quick Start npm install --save body-parser  import express from &#39;express&#39;; const app = express(); app.get(&#39;/&#39;, (req, res) =&amp;gt; { res.send(&#39;Hello Node.js-Express!&#39;); }); app.listen(4000, () =&amp;gt; { console.log(&#39;Start server at 4000.&#39;); });  Node Test Framework TL;DR; Use Jest for unit and integration tests and TestCafe for UI tests.
+  Jasmine Mocha (Mocha, Chai, Sinon) JTest (React Test Framework, on the top of Jasmine)  Reference  Medium: An Overview of JavaScript Testing in 2018  </description>
+    </item>
+    
+    <item>
+      <title>MongoDB</title>
+      <link>http://example.org/01.startup/03_mongodb/</link>
+      <pubDate>Sun, 11 Nov 2018 12:56:59 +0900</pubDate>
+      
+      <guid>http://example.org/01.startup/03_mongodb/</guid>
+      <description>MongoDBの準備 MongoDBをインストールする brew update &amp;amp;&amp;amp; brew install mongodb # Mongo-Expressのインストール npm i -g mongo-express  MongoDBを使う # 1. MongoDB Serverを起動する(手動) mongod --directoryperdb --dbpath /IST/Data/mongodb --logpath /IST/log/mongodb/mongo.log --logappend # 2. Mongoクライアントを使う mongo --host localhost:27017 show databases  Reference  Robo 3T(former RoboMongo) Download(Native and cross-platform MongoDB manager)  MongoDBの基本知識    SQL NoSQL     Table Collection   Row/Record Document   Column Field    Reference  DefintionName A Defintion explain</description>
+    </item>
+    
+    <item>
+      <title>Node Redis</title>
+      <link>http://example.org/01.startup/04_noderedis/</link>
+      <pubDate>Wed, 14 Nov 2018 22:48:35 +0900</pubDate>
+      
+      <guid>http://example.org/01.startup/04_noderedis/</guid>
+      <description> 環境構築 Redis環境構築 brew update &amp;amp;&amp;amp; brew install redis brew service start redis redis-cli pin # -&amp;gt; PONG  NodeJS環境構築 npm install --save redis  テストソース
+import redis from &#39;redis&#39;; const redisURL = &#39;redis://localhost:6379&#39;; const client = redis.createClient(reidsURL); client.set(&#39;hi&#39;, &#39;IST&#39;); client.get(&#39;hi&#39;, (err, value) = { console.log(value); })  </description>
+    </item>
+    
+    <item>
+      <title>OAuth</title>
+      <link>http://example.org/01.startup/10_oauth/</link>
+      <pubDate>Tue, 20 Nov 2018 21:48:39 +0900</pubDate>
+      
+      <guid>http://example.org/01.startup/10_oauth/</guid>
+      <description>npm install --save passport passport-jwt jsonwebtoken   Passport for Javascript  </description>
+    </item>
+    
+  </channel>
+</rss>
